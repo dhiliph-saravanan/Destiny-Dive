@@ -1,0 +1,588 @@
+/* Base Styles */
+.professional-bg {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.text-accent {
+  color: #2c5282;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-muted {
+  color: #718096;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+/* City Cards */
+.city-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.city-card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.city-card:hover img {
+  transform: scale(1.05);
+}
+
+.city-card .card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* PG Cards */
+.pg-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pg-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pg-card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pg-card:hover img {
+  transform: scale(1.05);
+}
+
+.pg-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Buttons */
+.btn-outline-accent {
+  border: 2px solid #4299e1;
+  color: #2c5282;
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-accent:hover {
+  background: #e3f2fd;
+  border-color: #2c5282;
+  color: #2c5282;
+}
+
+.btn-accent {
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background: #2c5282;
+  transform: scale(1.05);
+}
+
+.continue-btn {
+  background: linear-gradient(90deg, #4299e1, #2c5282);
+  color: white;
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.continue-btn:hover {
+  background: linear-gradient(90deg, #2c5282, #4299e1);
+  transform: scale(1.05);
+}
+
+/* Search Bar */
+.search-bar {
+  border: 2px solid #4299e1;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #2c5282;
+  box-shadow: 0 0 10px rgba(44, 82, 130, 0.3);
+  outline: none;
+}
+
+/* Filters */
+.filter-input, .filter-select {
+  border: 2px solid #4299e1;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.filter-input:focus, .filter-select:focus {
+  border-color: #2c5282;
+  box-shadow: 0 0 10px rgba(44, 82, 130, 0.3);
+  outline: none;
+}
+
+.sort-select {
+  border: 2px solid #4299e1;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.sort-select:focus {
+  border-color: #2c5282;
+  box-shadow: 0 0 10px rgba(44, 82, 130, 0.3);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* General Styles */
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  background: #f7fafc;
+}
+
+.invalid-feedback {
+  font-size: 0.875rem;
+  color: #e53e3e;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .city-card, .pg-card {
+    margin-bottom: 1.5rem;
+  }
+  .continue-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+  .search-bar {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extended Styles for Interactivity */
+.city-card .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pg-card .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Additional Styling for Each Section */
+.city-selection {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+}
+
+.pg-listings {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+}
+
+.enquiry-form, .booking-form {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+.form-control {
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #2c5282;
+  box-shadow: 0 0 10px rgba(44, 82, 130, 0.3);
+}
+
+/* Extended CSS for Visual Appeal */
+.professional-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/subtle-stripes.png');
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.city-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+}
+
+.pg-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+}
+
+/* Typography */
+h2.text-accent {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h5.text-muted {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Additional Interactive Elements */
+.rating-stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rating-stars .cursor-pointer {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.rating-stars .cursor-pointer:hover {
+  transform: scale(1.2);
+}
+
+/* Form Layout */
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Extended Button Styles */
+.btn-outline-danger {
+  border-color: #e53e3e;
+  color: #e53e3e;
+}
+
+.btn-outline-danger:hover {
+  background: #fee2e2;
+  border-color: #e53e3e;
+  color: #e53e3e;
+}
+
+/* Card Details */
+.card-text {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Modal Styling */
+.modal-content h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Additional Responsive Adjustments */
+@media (max-width: 576px) {
+  h2.text-accent {
+    font-size: 2rem;
+  }
+  .pg-card, .city-card {
+    margin-bottom: 1rem;
+  }
+  .continue-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extended Styles for Each Component */
+.city-card .card-body p {
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.pg-card .card-body p {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Filter Section */
+.filter-row {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Load More Button */
+.btn-outline-accent.load-more {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Footer and Navbar Integration */
+footer, nav {
+  background: #2c5282;
+  color: white;
+  padding: 2rem;
+}
+
+/* Extended Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Additional Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+/* Extended Color Palette */
+.bg-accent {
+  background: #4299e1;
+}
+
+.text-warning {
+  color: #f6c107;
+}
+
+/* Form Validation */
+.is-invalid {
+  border-color: #e53e3e;
+}
+
+.is-invalid:focus {
+  box-shadow: 0 0 10px rgba(229, 62, 62, 0.3);
+}
+
+/* Extra Spacing and Padding */
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.p-4 {
+  padding: 1.5rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-3 {
+  margin: 1rem;
+}
+
+.m-4 {
+  margin: 1.5rem;
+}
+
+/* Shadows */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Borders */
+.border {
+  border: 1px solid #e2e8f0;
+}
+
+.border-accent {
+  border: 2px solid #4299e1;
+}
+
+/* Typography Variations */
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-normal {
+  font-weight: 400;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-size-sm {
+  font-size: 0.875rem;
+}
+
+.font-size-lg {
+  font-size: 1.25rem;
+}
+
+/* Custom Icons */
+.icon {
+  margin-right: 0.5rem;
+}
+
+/* Extended Responsive Design */
+@media (min-width: 992px) {
+  .city-card {
+    height: 300px;
+  }
+  .pg-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter-row .col-md-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-row .col-md-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400&family=Montserrat:wght@700&display=swap');

@@ -1,0 +1,349 @@
+/* General Layout */
+.container {
+  max-width: 85%;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  padding: 15px;
+}
+
+/* College Header */
+.college-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.college-header h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.underline {
+  width: 100px;
+  height: 5px;
+  background-color: #0056b3;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+/* College Image & About */
+.college-intro {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #f8faff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.image-carousel {
+  position: relative;
+  width: 45%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.college-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-carousel p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.image-carousel:hover .prev-btn,
+.image-carousel:hover .next-btn {
+  opacity: 1;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.about-college {
+  width: 55%;
+}
+
+.about-college h2 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.about-college p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Info Cards */
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.info-card {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-card:hover {
+  background: #eaf4ff;
+  transform: translateY(-4px);
+}
+
+/* Table */
+.course-fee {
+  margin-top: 25px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.course-fee h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.course-fee table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.course-fee th,
+.course-fee td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.course-fee th {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.course-fee tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Apply and Wishlist Buttons */
+.apply-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between buttons */
+  margin-top: 25px;
+}
+
+.apply-btn button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.apply-btn button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.wishlist-btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+.wishlist-btn:hover {
+  background-color: #e6393d;
+  transform: scale(1.05);
+}
+
+/* Additional Info */
+.additional-info {
+  margin-top: 30px;
+  padding: 20px;
+  background: #ecf0f1;
+  border-radius: 8px;
+}
+
+.additional-info h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.additional-info p {
+  color: #34495e;
+  margin: 5px 0;
+}
+
+/* Error and Loading Messages */
+.error-message,
+.loading-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 20px;
+}
+
+/* Dark Mode */
+.dark .additional-info {
+  background: #2c3e50;
+  color: #ecf0f1;
+}
+
+.dark .course-fee th {
+  background-color: #34495e;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .college-header h1 {
+    font-size: 2rem;
+  }
+
+  .college-intro {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .image-carousel {
+    width: 45%;
+    height: 250px;
+  }
+
+  .about-college {
+    width: 55%;
+  }
+
+  .info-card {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .apply-btn {
+    gap: 10px;
+  }
+
+  .apply-btn button,
+  .wishlist-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .college-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .college-intro {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .image-carousel {
+    width: 100%;
+    height: 200px;
+  }
+
+  .about-college {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-card {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .course-fee table {
+    font-size: 0.9rem;
+  }
+
+  .apply-btn {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .apply-btn button,
+  .wishlist-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 100%; /* Full width on small screens */
+    max-width: 250px; /* Limit width for aesthetics */
+  }
+}

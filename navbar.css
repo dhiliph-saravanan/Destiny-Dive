@@ -1,0 +1,52 @@
+/* UniGuideNavStyles.css */
+
+/* Reduce the size of the navbar container */
+.ugn-navbar {
+  padding: 0.1px;
+  font-size: 1rem;
+}
+
+.ugn-navbar-brand img {
+  width: 20vw;
+  max-width: 120px;
+}
+
+.ugn-navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+}
+
+.ugn-navbar-toggler {
+  padding: 0.25rem 0.5rem;
+}
+
+.ugn-navbar-nav .dropdown-menu {
+  font-size: 0.9rem;
+}
+
+.ugn-navbar-nav .dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.ugn-navbar-nav .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Hover effect for Login button */
+.ugn-navbar .btn:hover {
+  color: white;
+  background-color: #007bff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Note: This rule was problematic - li.nav-link doesn't exist; fixing it to target nav-link */
+.ugn-navbar-nav .nav-link:hover {
+  color: black;
+}
+
+/* Hover effect for Sign-Up button */
+.ugn-navbar .btn-warning:hover {
+  background-color: #ff8800;
+  color: yellow;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

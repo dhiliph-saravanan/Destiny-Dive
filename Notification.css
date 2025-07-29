@@ -1,0 +1,126 @@
+:root {
+  --notification-font-size: 25px; /* Adjusted for better visibility */
+}
+
+.notification-container {
+  position: relative;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #abc4ff, #fff0f3);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(30, 105, 255, 0.519), 0 4px 8px rgba(156, 91, 91, 0.1); /* Enhanced shadow */
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out;
+}
+
+.notification-header h2 {
+  margin: 0;
+  color: #000000;
+  font-size: var(--notification-font-size);
+  display: flex;
+  align-items: center;
+}
+
+.notification-header h2 .fa-bell {
+  margin-left: 10px;
+  color: #000000;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notification-item {
+  background: #FDF7F4;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align content and push button to the right */
+  transition: background 0.3s ease, transform 0.2s;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.notification-item:hover {
+  transform: scale(1.02);
+}
+
+.notification-item.read {
+  background: #e0e0e0;
+}
+
+.notification-item p {
+  margin: 0;
+  color: #555;
+  font-size: 16px;
+  flex-grow: 1; /* Allow text to take available space */
+}
+
+.notification-item button {
+  background: #B1F0F7;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.notification-item button:hover {
+  background: #459efe;
+}
+
+.notification-item.read p {
+  color: #999;
+}
+
+.notification-item.read button {
+  background: #6c757d;
+  cursor: default;
+}
+
+.notification-item.read button:hover {
+  background: #6c757d;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

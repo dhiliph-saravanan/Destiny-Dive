@@ -1,0 +1,19 @@
+{
+  "universities": [
+    {
+      "id": 1,
+      "name": "Stallion University",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Covenant University",
+      "image": "https://via.placeholder.com/150"
+    }
+  ],
+  "applications": [
+    { "id": 1, "status": "Pending" },
+    { "id": 2, "status": "Approved" },
+    { "id": 3, "status": "Rejected" }
+  ]
+}

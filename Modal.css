@@ -1,0 +1,106 @@
+/* 🔹 Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+/* 🔹 Modal Box */
+.modal-content {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+/* 🔹 Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #444;
+  transition: 0.3s;
+}
+.close-btn:hover {
+  color: #ff4f70;
+}
+
+/* 🔹 Title & Subtitle */
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+.modal-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Button Container */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 🔹 Buttons */
+.modal-btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  width: 48%;
+}
+
+/* 🔹 Login Button */
+.login {
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  color: white;
+  box-shadow: 0px 5px 10px rgba(255, 79, 112, 0.3);
+}
+.login:hover {
+  background: linear-gradient(to right, #ff6484, #ff3f60);
+  transform: scale(1.05);
+}
+
+/* 🔹 Skip Button */
+.skip {
+  background: #eeeeee;
+  color: #333;
+  border: 1px solid #ccc;
+}
+.skip:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+/* ✨ Animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

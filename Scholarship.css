@@ -1,0 +1,166 @@
+/* Hero Section with Animated Gradient */
+.hero-section {
+    background: linear-gradient(135deg, #007bff 30%, #0056b3 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 12s ease infinite;
+    color: white;
+    padding: 140px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+  }
+  
+  .apply-btn {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border: none;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    background: linear-gradient(135deg, #218838, #1ca179);
+    transform: scale(1.1);
+  }
+  
+  /* Announcement Banner */
+  .announcement-banner {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-size: 1rem;
+  }
+  
+  /* Trusted By Section */
+  .trusted-by {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+  }
+  
+  .trust-logo {
+    height: 80px; /* Increased height for better visibility */
+    opacity: 0.9; /* Slightly higher opacity */
+    border-radius: 10px; /* Added rounded corners */
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  }
+
+  .trust-logo:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Increased scale for a more dynamic hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 40px;
+  }
+  
+  /* Quick Links Section */
+  .quick-link-card {
+    padding: 30px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .quick-link-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .quick-link-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .quick-link-card h3 {
+    font-size: 1.5rem;
+    color: #343a40;
+    font-weight: bold;
+  }
+  
+  .quick-link-card p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  /* Testimonials Section */
+  .testimonial-card {
+    padding: 25px;
+    border-left: 5px solid #007bff;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-style: italic;
+    color: #6c757d;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    background: #e9ecef;
+    transform: translateY(-5px);
+  }
+  
+  .testimonial-card img {
+    border: 3px solid #007bff;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .testimonial-card h5 {
+    font-weight: bold;
+    color: #343a40;
+    margin-top: 15px;
+  }
+  
+  /* Trust Metrics Section */
+  .trust-metrics {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 60px 0;
+  }
+  
+  .trust-metrics h2 {
+    font-size: 2.2rem;
+  }
+  
+  .trust-metrics h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .trust-metrics p {
+    font-size: 1.2rem;
+  }
+  
+  .trust-note {
+    font-size: 1rem;
+    margin-top: 20px;
+  }

@@ -1,0 +1,46 @@
+.scholarship-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .scholarship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scholarship-card .card-body {
+    padding: 20px;
+  }
+  
+  .scholarship-card .card-title {
+    font-size: 1.25rem;
+    color: #007bff;
+  }
+  
+  .scholarship-card .card-footer {
+    background-color: #f8f9fa;
+    border-top: none;
+    padding: 10px;
+  }
+  
+  .see-more-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .see-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .trust-note {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }

@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.ud-about-container {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Profile Summary Card */
+.ud-profile-summary-card {
+  background: linear-gradient(135deg, #ffffff, #e6f0fa);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.ud-profile-summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ud-profile-summary-card .ud-card-body {
+  padding: 2rem;
+}
+
+.ud-profile-summary-card .ud-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.ud-profile-summary-card .ud-card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Progress Section */
+.ud-progress-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ud-progress-section h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.ud-progress-section .ud-progress {
+  height: 1.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ud-progress-section .ud-progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+.ud-progress-section p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+/* Chart Section */
+.ud-chart-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ud-chart-section h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.ud-chart-section .ud-recharts-wrapper {
+  margin: 0 auto;
+}
+
+/* Insights Section */
+.ud-insights-section h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 1.5rem;
+}
+
+.ud-insight-card {
+  background: linear-gradient(135deg, #ffffff, #f1faff);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ud-insight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ud-insight-card .ud-card-body {
+  padding: 1.5rem;
+}
+
+.ud-insight-card .ud-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 0.75rem;
+}
+
+.ud-insight-card .ud-card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Next Action Section */
+.ud-next-action-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ud-next-action-section h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.ud-next-action-section p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.ud-next-action-section .ud-btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ud-next-action-section .ud-btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Modal Overlay and Content */
+.ud-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ud-modal-content {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.ud-modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 1.5rem;
+}
+
+.ud-drag-drop-area {
+  border: 2px dashed #6c757d;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.ud-drag-drop-area.ud-drag-active {
+  border-color: #007bff;
+  background-color: #e6f0fa;
+}
+
+.ud-drag-drop-area p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.ud-modal-actions {
+  margin-top: 1.5rem;
+}
+
+.ud-modal-actions .ud-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ud-modal-actions .ud-btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.ud-modal-actions .ud-btn-success:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.ud-modal-actions .ud-btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  margin-left: 1rem;
+}
+
+.ud-modal-actions .ud-btn-secondary:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+/* Utility Classes */
+.ud-text-center {
+  text-align: center;
+}
+
+.ud-my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.ud-mb-5 {
+  margin-bottom: 3rem;
+}
+
+.ud-mb-3 {
+  margin-bottom: 1rem;
+}
+
+.ud-col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.ud-col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.ud-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.ud-row > * {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.ud-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+}
+
+.ud-py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.ud-spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: ud-spinner-border .75s linear infinite;
+}
+
+@keyframes ud-spinner-border {
+  to { transform: rotate(360deg); }
+}
+
+.ud-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.ud-bg-success {
+  background-color: #28a745 !important;
+}
+
+.ud-btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.ud-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.ud-card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.ud-progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.ud-progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #007bff;
+  transition: width 0.6s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ud-about-container {
+    padding: 1rem 0;
+  }
+
+  .ud-container {
+    padding: 1rem;
+  }
+
+  .ud-profile-summary-card {
+    max-width: 100%;
+  }
+
+  .ud-profile-summary-card .ud-card-title {
+    font-size: 1.3rem;
+  }
+
+  .ud-profile-summary-card .ud-card-text {
+    font-size: 0.9rem;
+  }
+
+  .ud-progress-section,
+  .ud-chart-section,
+  .ud-next-action-section {
+    padding: 1rem;
+  }
+
+  .ud-progress-section h4,
+  .ud-chart-section h4,
+  .ud-insights-section h4,
+  .ud-next-action-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .ud-insight-card .ud-card-body {
+    padding: 1rem;
+  }
+
+  .ud-insight-card .ud-card-title {
+    font-size: 1rem;
+  }
+
+  .ud-insight-card .ud-card-text {
+    font-size: 0.85rem;
+  }
+
+  .ud-next-action-section .ud-btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .ud-modal-content {
+    padding: 1.5rem;
+  }
+
+  .ud-modal-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .ud-drag-drop-area {
+    padding: 1.5rem;
+  }
+
+  .ud-col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .ud-col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
